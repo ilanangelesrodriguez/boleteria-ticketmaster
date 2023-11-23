@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import MyFirstComponent from "./MyFirstComponent.jsx";
 import {Navbar} from "./components/Navbar/index.jsx";
+import {Events} from "./components/Events/index.jsx";
 
 const arrayOfNumbers = [1, 2, 3, 4, 5];
 const arrayOfPeople = [
@@ -46,6 +47,7 @@ function App() {
           {count < 2 ? <div>Cargando ...</div> : (
               <div>
                   <Navbar/>
+                  <Events/>
                   <MyFirstComponent propOne={count} propTwo={2} propThree={{}}/>
                   <ul>
                       {items}
