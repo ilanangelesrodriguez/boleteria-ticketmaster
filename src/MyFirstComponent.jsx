@@ -9,7 +9,7 @@ const MyFirstComponent = ( {propOne, propTwo, propThree} ) => {
         setCount(count + 1);
     }, 200000);
 
-    console.log('my first component rendered');
+    //console.log('my first component rendered');
 
     return (
         <div>
