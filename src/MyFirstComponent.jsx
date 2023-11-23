@@ -7,7 +7,7 @@ const MyFirstComponent = ( {propOne, propTwo, propThree} ) => {
     // Esto se actualiza cada 8 segundos
     setTimeout(() => {
         setCount(count + 1);
-    }, 20000);
+    }, 200000);
 
     console.log('my first component rendered');
 
