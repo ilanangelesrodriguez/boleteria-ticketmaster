@@ -24,39 +24,42 @@ const arrayOfPeople = [
 ];
 
 function App() {
-  const [count, setCount] = useState(0);
+  //const [count, setCount] = useState(0);
+  const [searchText, setSearchText] = useState("");
 
-  const items = arrayOfNumbers.map((number) => {
+  /*const items = arrayOfNumbers.map((number) => {
         return <li key={`array-number-item-${number}`}>{number}</li>
   });
 
   const peopleItems = arrayOfPeople.map((person) => {
         return <li key={`array-person-item-${person.id}`}>{person.id}: {person.name}</li>
-  });
+  });*/
 
+  const handleNavbarSearch = (searchText) => {
+      setSearchText(searchText);
+  }
 
-  setTimeout(() => {
+  /*setTimeout(() => {
       setCount(count + 1);
-  }, 2000);
+  }, 2000);*/
 
   //console.log('app rendered');
 
   return (
       <>
-
-          {count < 2 ? <div>Cargando ...</div> : (
+          {/*{count < 2 ? <div>Cargando ...</div> : (*/}
               <div>
-                  <Navbar/>
-                  <Events/>
-                  <MyFirstComponent propOne={count} propTwo={2} propThree={{}}/>
+                  <Navbar onSearch={handleNavbarSearch}/>
+                  <Events searchText={searchText}/>
+                  {/*<MyFirstComponent propOne={count} propTwo={2} propThree={{}}/>
                   <ul>
                       {items}
                   </ul>
                   <ul>
                       {peopleItems}
-                  </ul>
+                  </ul>*/}
               </div>
-          )}
+          {/*)}*/}
       </>
   )
 }
