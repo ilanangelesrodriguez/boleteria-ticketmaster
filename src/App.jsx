@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import {useState} from 'react'
 import './App.css'
 import {Navbar} from "./components/Navbar/index.jsx";
 import {Events} from "./components/Events/index.jsx";
@@ -14,9 +14,9 @@ function App() {
 
   return (
       <>
-          {/*<Navbar onSearch={handleNavbarSearch}/>
-          <Events searchText={searchText}/>*/}
-          <SignUpForm />
+          <Navbar onSearch={handleNavbarSearch}/>
+          <Events searchText={searchText}/>
+          {/*<SignUpForm />*/}
       </>
   )
 }
