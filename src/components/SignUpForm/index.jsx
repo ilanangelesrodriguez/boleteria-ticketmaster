@@ -1,6 +1,9 @@
 import {useState} from "react";
+import {useForm} from "react-hook-form";
 
 export const SignUpForm = () => {
+    const {register, handleSubmit, reset, formState:{errors} } = useForm();
+
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
     const [adress, setAdress] = useState("");
@@ -8,49 +11,41 @@ export const SignUpForm = () => {
     const [phone, setPhone] = useState("");
 
     const handleClearClick = () => {
-        setName("");
-        setAge("");
-        setAdress("");
-        setZipcode("");
-        setPhone("");
+        reset();
     }
 
-    const handleFormSubmit = (event) => {
-        event.preventDefault();
-        console.log("Formulario enviado", {
-            name,
-            age,
-            adress,
-            zipcode,
-            phone
-        });
+    const handleFormSubmit = (data) => {
+        console.log(data);
+
     }
+
+    console.log(errors);
 
     return (
-        <form onSubmit={handleFormSubmit}>
+        <form onSubmit={handleSubmit(handleFormSubmit)}>
             <label>
                 Name
-                <input required value={name} type="text" onChange={(e)=>setName(e.target.value)} />
+                <input type="text" {...register('name', {required: true})} />
             </label>
             <br/>
             <label>
                 Age
-                <input required value={age} type="number" onChange={(e)=>setAge(e.target.value)} />
+                <input type="number" {...register('age', {required: true})} />
             </label>
             <br/>
             <label>
                 Adress
-                <input required value={adress} type="text" onChange={(e)=>setAdress(e.target.value)} />
+                <input type="text" {...register('adress', {required: true})} />
             </label>
             <br/>
             <label>
                 Zipcode
-                <input required value={zipcode} type="text" onChange={(e)=>setZipcode(e.target.value)} />
+                <input type="text" {...register('zipcode', {required: true})} />
             </label>
             <br/>
             <label>
                 Phone
-                <input required value={phone} type="number" onChange={(e)=>setPhone(e.target.value)} />
+                <input type="number" {...register('phone', {required: true})} />
             </label>
             <div>
                 <button>Enviar</button>
