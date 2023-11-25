@@ -5,7 +5,7 @@ import {useEventsData} from "../../hooks/useEventsData.js";
 // data._embedded es un array de eventos de la API de eventos de Ticketmaster
 export const Events = ({ searchText }) => {
 
-    const {events} = useEventsData();
+    const {events, isLoading, error} = useEventsData();
     const handleEventClick = (id) => {
         console.log("evento clickeado: ", id);
     }
@@ -29,6 +29,14 @@ export const Events = ({ searchText }) => {
             />
         ));
     };
+
+    if (error) {
+        return <p>Hubo un error</p>;
+    }
+
+    if (isLoading) {
+        return <p>Cargando...</p>;
+    }
 
     return (
         <div>
