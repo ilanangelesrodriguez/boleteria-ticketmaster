@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import styles from './Navbar.module.css';
+import ticketmasterBanner from '../../assets/ticketmaster_banner.png';
 
 export const Navbar = ({ onSearch } ) => {
     const [search, setSearch] = useState("");
@@ -31,7 +32,7 @@ export const Navbar = ({ onSearch } ) => {
             flexDirection: "row",
             flexWrap: "wrap",
         }}>
-            <img src={'../../public/ticketmaster_banner.png'} alt={"Logo"} className={styles.navbarImg}/>
+            <img src={ticketmasterBanner} alt={"Logo"} className={styles.navbarImg}/>
             <input type="text"
                    placeholder="Busca tu evento favorito"
                    onChange={handleInputChange}
