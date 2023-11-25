@@ -8,6 +8,11 @@
     color: #697e91;
 }
 
+.eventItemContainer:hover {
+    transform: scale(1.002);
+    box-shadow: 0px 0px 10px 2px #5a5a5a;
+}
+
 .eventItemContainerInner {
     display: flex;
     flex-direction: column;

@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {EventItem} from "./components/EventItem/index.jsx";
 import {useEventsData} from "../../hooks/useEventsData.js";
+import styles from './Events.module.css';
 
 // data._embedded es un array de eventos de la API de eventos de Ticketmaster
 export const Events = ({ searchText }) => {
@@ -35,7 +36,7 @@ export const Events = ({ searchText }) => {
     }
 
     if (isLoading) {
-        return <p>Cargando...</p>;
+        return <div className={styles.customLoader}></div>;
     }
 
     return (
