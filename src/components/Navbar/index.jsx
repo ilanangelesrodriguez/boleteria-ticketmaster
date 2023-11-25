@@ -21,7 +21,13 @@ export const Navbar = ({ onSearch } ) => {
     //console.log(search)
 
     return (
-        <div>
+        <div style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "1em",
+            flexDirection: "column",
+        }}>
             <p>Mi boletera</p>
             <input type="text"
                    placeholder="Busca tu evento favorito"
