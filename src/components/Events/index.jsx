@@ -1,12 +1,11 @@
 import {useState} from "react";
 import {EventItem} from "./components/EventItem/index.jsx";
-import eventsJSON from "../../data/events.json";
+import {useEventsData} from "../../hooks/useEventsData.js";
 
 // data._embedded es un array de eventos de la API de eventos de Ticketmaster
 export const Events = ({ searchText }) => {
 
-    const [data, setData] = useState(eventsJSON);
-    const { _embedded: {events} } = data;
+    const {events} = useEventsData();
     const handleEventClick = (id) => {
         console.log("evento clickeado: ", id);
     }
