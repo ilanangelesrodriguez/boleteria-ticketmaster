@@ -1,0 +1,36 @@
+.eventItemContainer {
+    max-width: 100%;
+    margin: 1em;
+    border-radius: 16px;
+    box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);
+    padding: 10px;
+    background-color: #fff;
+    color: #697e91;
+}
+
+.eventItemContainerInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ecf0ff;
+    border-radius: 12px;
+}
+
+.eventItemContainerButton {
+    background-color: #6558d3;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    border: 0;
+    padding: 0.625em 0.75em;
+    text-decoration: none;
+    outline: none;
+}
+
+.eventItemContainerButton:hover, .eventItemContainerButton:focus {
+    background-color: #4133B7;
+}
+

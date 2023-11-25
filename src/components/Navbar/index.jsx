@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import styles from './Navbar.module.css';
 
 export const Navbar = ({ onSearch } ) => {
     const [search, setSearch] = useState("");
@@ -23,17 +24,20 @@ export const Navbar = ({ onSearch } ) => {
     return (
         <div style={{
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "space-between",
             alignItems: "center",
+            gap: "1em",
             padding: "1em",
-            flexDirection: "column",
+            flexDirection: "row",
+            flexWrap: "wrap",
         }}>
-            <p>Mi boletera</p>
+            <img src={'../../public/ticketmaster_banner.png'} alt={"Logo"} className={styles.navbarImg}/>
             <input type="text"
                    placeholder="Busca tu evento favorito"
                    onChange={handleInputChange}
                    onKeyDown={handleInputKeyDown}
                    value={search}
+                   className={styles.navbarInput}
             />
         </div>
     );

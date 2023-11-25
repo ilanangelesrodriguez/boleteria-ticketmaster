@@ -1,0 +1,23 @@
+.navbarImg {
+    height: 1.5em;
+    margin: auto;
+}
+
+.navbarInput {
+    margin: auto;
+    color: black;
+    padding: 10px;
+    outline: none;
+    background: #e8e8e8;
+    box-shadow: 1px 1px 8px #c8c8c8,
+    -1px -1px 8px #ffffff;
+    border: none;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+.navbarInput:hover {
+    background: #e8e8e8;
+    box-shadow: inset 5px 5px 17px #c8c8c8,
+    inset -5px -5px 17px #ffffff;
+}
